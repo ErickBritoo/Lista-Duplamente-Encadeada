@@ -53,7 +53,7 @@
 
             return removed;
         }
-        public void AddAfter(Node after, Node node)
+        public static void AddAfter(Node after, Node node)
         {
             node.Prev = after;
             node.Next = after.Next;
@@ -62,7 +62,19 @@
             after.Next = node;
         }
 
+        public void Remove(Node node)
+        {
+            if (node == null || node.Prev == null || node.Next == null)
+                throw new InvalidOperationException("Nó inválido para remoção.");
 
+            node.Prev.Next = node.Next;
+            node.Next.Prev = node.Prev;
+
+            node.Next = null;
+            node.Prev = null;
+
+            Size--;
+        }
 
         public bool IsEmpty => Size == 0;
     }

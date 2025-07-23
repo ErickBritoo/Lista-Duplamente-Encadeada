@@ -19,7 +19,7 @@ namespace ListaDuplamenteEncadeada
             ExibirItems(list);
 
             Node node4 = new("Diana");
-            list.AddAfter(node2, node4);
+            DLinkedList.AddAfter(node2, node4);
             
             ExibirItems(list);
 
