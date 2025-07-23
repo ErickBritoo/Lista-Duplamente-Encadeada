@@ -1,0 +1,12 @@
+## Ignore arquivos do Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build e binários
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
